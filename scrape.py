@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import os
 
-os.makedirs('data')
+os.makedirs('data', exist_ok=True)
 
 dshs_url = 'https://www.dshs.texas.gov/news-alerts/measles-outbreak-2025'
 
