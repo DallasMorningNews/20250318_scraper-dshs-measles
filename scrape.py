@@ -1,6 +1,9 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 import requests
+import os
+
+os.makedirs('data')
 
 dshs_url = 'https://www.dshs.texas.gov/news-alerts/measles-outbreak-2025'
 
