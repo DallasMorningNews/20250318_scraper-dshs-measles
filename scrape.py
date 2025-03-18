@@ -33,12 +33,15 @@ tables = soup.find_all("table")
 ## Age range
 # print(tables[1])
 age_df = pd.read_html(str(tables[1]))[0]
-age_df.to_csv('data/raw_age-range.csv', index=False)
-age_df['total'] = age_df["0 - 4 years"]+age_df["5 - 17 years"]+age_df["18+ years"]+age_df["Pending"]
-age_df["%_0 - 4 years"] = age_df["0 - 4 years"]/age_df['total']
-age_df["%_5 - 17 years"] = age_df["5 - 17 years"]/age_df['total']
-age_df["%_18+ years"] = age_df["18+ years"]/age_df['total']
-age_df["%_Pending"] = age_df["Pending"]/age_df['total']
+age_df.to_csv('data/raw_age-range.csv')
+age_df['age_total'] = age_df["0 - 4 years"]+age_df["5 - 17 years"]+age_df["18+ years"]+age_df["Pending"]
+age_df["Ages 0-4"] = age_df["0 - 4 years"]/age_df['age_total']
+age_df["Ages 5 - 17 years"] = age_df["5 - 17 years"]/age_df['age_total']
+age_df["Ages 18+"] = age_df["18+ years"]/age_df['age_total']
+age_df["Age unknown"] = age_df["Pending"]/age_df['age_total']
+age_df = age_df.T
+age_df.columns=['Value']
+age_df = age_df.reset_index().rename(columns={'index': 'Category'})
 age_df.to_csv('data/parsed-age-range.csv', index=False)
 
 ## Vax stats
@@ -46,9 +49,16 @@ vax_df = pd.read_html(str(tables[2]))[0]
 vax_df = vax_df.T
 vax_df.columns = vax_df.iloc[0] 
 vax_df = vax_df[1:].reset_index(drop=True) 
-vax_df.to_csv('data/raw_vax.csv', index=False)
-vax_df['total'] = vax_df["Unvaccinated/Unknown"]+vax_df["Vaccinated: 1 dose"]+vax_df["Vaccinated: 2+ doses"]
-vax_df["%_Unvaccinated/Unknown"] = vax_df["Unvaccinated/Unknown"]/vax_df['total']
-vax_df["%_Vaccinated: 1 dose"] = vax_df["Vaccinated: 1 dose"]/vax_df['total']
-vax_df["%_Vaccinated: 2+ doses"] = vax_df["Vaccinated: 2+ doses"]/vax_df['total']
+vax_df.to_csv('data/raw_vax.csv')
+vax_df['vax_total'] = vax_df["Unvaccinated/Unknown"]+vax_df["Vaccinated: 1 dose"]+vax_df["Vaccinated: 2+ doses"]
+vax_df["Not vaccinated, or unknown*"] = vax_df["Unvaccinated/Unknown"]/vax_df['vax_total']
+vax_df["Vaccinated with only one dose"] = vax_df["Vaccinated: 1 dose"]/vax_df['vax_total']
+vax_df["Vaccinated with at least two doses"] = vax_df["Vaccinated: 2+ doses"]/vax_df['vax_total']
+vax_df = vax_df.T
+vax_df.columns=['Value']
+vax_df = vax_df.reset_index().rename(columns={'index': 'Test'})
+vax_df = vax_df.rename(columns={0:"Category"})
 vax_df.to_csv('data/parsed_vax.csv', index=False)
+
+cdf = pd.concat([age_df, vax_df])
+cdf.to_csv('data/parsed_both.csv', index=False)

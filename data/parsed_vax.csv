@@ -1,2 +1,8 @@
-Unvaccinated/Unknown,Vaccinated: 1 dose,Vaccinated: 2+ doses,total,%_Unvaccinated/Unknown,%_Vaccinated: 1 dose,%_Vaccinated: 2+ doses
-277,0,2,279,0.992831541218638,0.0,0.007168458781362007
+Category,Value
+Unvaccinated/Unknown,277
+Vaccinated: 1 dose,0
+Vaccinated: 2+ doses,2
+vax_total,279
+"Not vaccinated, or unknown*",0.992831541218638
+Vaccinated with only one dose,0.0
+Vaccinated with at least two doses,0.007168458781362007
