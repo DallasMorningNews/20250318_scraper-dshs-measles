@@ -1,13 +1,14 @@
 Category,Value
-0 - 4 years,88.0
-5 - 17 years,120.0
-18+ years,52.0
-Pending,19.0
-age_total,279.0
-Ages 0-4,0.3154121863799283
+0 - 4 years,88
+5 - 17 years,120
+18+ years,52
+Pending,19
+age_total,279
+Ages 0 - 4,0.3154121863799283
 Ages 5 - 17 years,0.43010752688172044
 Ages 18+,0.1863799283154122
 Age unknown,0.06810035842293907
+type,Age
 Unvaccinated/Unknown,277
 Vaccinated: 1 dose,0
 Vaccinated: 2+ doses,2
@@ -15,3 +16,4 @@ vax_total,279
 "Not vaccinated, or unknown*",0.992831541218638
 Vaccinated with only one dose,0.0
 Vaccinated with at least two doses,0.007168458781362007
+type,Vaccination status

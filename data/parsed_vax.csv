@@ -6,3 +6,4 @@ vax_total,279
 "Not vaccinated, or unknown*",0.992831541218638
 Vaccinated with only one dose,0.0
 Vaccinated with at least two doses,0.007168458781362007
+type,Vaccination status
