@@ -1,9 +1,9 @@
 Category,Value
-Unvaccinated/Unknown,307
+Unvaccinated/Unknown,325
 Vaccinated: 1 dose,0
 Vaccinated: 2+ doses,2
-vax_total,309
-"Not vaccinated, or unknown*",0.9935275080906149
+vax_total,327
+"Not vaccinated, or unknown*",0.9938837920489296
 Vaccinated with only one dose,0.0
-Vaccinated with at least two doses,0.006472491909385114
+Vaccinated with at least two doses,0.0061162079510703364
 type,Vaccination status

@@ -1,11 +1,11 @@
 Category,Value
-0 - 4 years,102
-5 - 17 years,130
-18+ years,58
+0 - 4 years,105
+5 - 17 years,140
+18+ years,63
 Pending,19
-age_total,309
-Ages 0 - 4,0.3300970873786408
-Ages 5 - 17 years,0.42071197411003236
-Ages 18+,0.18770226537216828
-Age unknown,0.061488673139158574
+age_total,327
+Ages 0 - 4,0.3211009174311927
+Ages 5 - 17 years,0.42813455657492355
+Ages 18+,0.1926605504587156
+Age unknown,0.0581039755351682
 type,Age

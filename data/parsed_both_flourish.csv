@@ -1,8 +1,8 @@
 Category,Cases %,Cases #,Type,total cases
-0 - 4 years,0.3300970873786408,102,Age,309.0
-5 - 17 years,0.42071197411003236,130,Age,
-18+ years,0.18770226537216828,58,Age,
-Unknown,0.061488673139158574,19,Age,
-"Not vaccinated, or unknown*",0.9935275080906149,307,Vaccination status,
+0 - 4 years,0.3211009174311927,105,Age,327.0
+5 - 17 years,0.42813455657492355,140,Age,
+18+ years,0.1926605504587156,63,Age,
+Unknown,0.0581039755351682,19,Age,
+"Not vaccinated, or unknown*",0.9938837920489296,325,Vaccination status,
 Vaccinated with only one dose,0.0,0,Vaccination status,
-Vaccinated with at least two doses,0.006472491909385114,2,Vaccination status,
+Vaccinated with at least two doses,0.0061162079510703364,2,Vaccination status,
